@@ -1,3 +1,4 @@
+import CallToAction from "@/components/CallToAction";
 import ComparisonSection from "@/components/Comparison";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <ComparisonSection />
       <Features />
       <Pricing />
+      <CallToAction />
       <Footer />
     </div>
   );
