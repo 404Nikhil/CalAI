@@ -13,7 +13,7 @@ const Navbar = () => {
         <a href="#testimonials" className="text-white hover:text-primary transition-colors">Testimonials</a>
       </div>
       
-      <button className="btn-primary">Join Waitlisting</button>
+      <button className="bg-[#FFD700] text-[#0a0a0a] font-semibold py-2 px-6 rounded-md hover:bg-opacity-90 transition-all duration-300">Join Waitlisting</button>
     </nav>
   );
 };
