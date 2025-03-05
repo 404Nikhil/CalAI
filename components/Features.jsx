@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroButton from './HeroButton';
 
 const Features = () => {
     const features = [
@@ -51,20 +52,26 @@ const Features = () => {
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {features.map((feature, index) => (
-                    <div key={index} className="bg-[#121212] hover:border-[#FFD700] p-6 rounded-lg border border-lightgray transition-all duration-300">
-                        <div className="mb-4">
-                            {feature.icon}
+                {features.map((feature, index) => {
+                    const cardClass = index % 2 === 1
+                        ? 'bg-gradient-to-b from-[#000000]/70 to-[#000000]/90'
+                        : 'bg-gradient-to-b from-[#C19A6B]/80 to-[#C19A6B]/100';
+                    return (
+                        <div
+                            key={index}
+                            className={`${cardClass} p-8 rounded-xl text-white shadow-md shadow-black/45`}
+                        >
+                            <div className="mb-4">
+                                {feature.icon}
+                            </div>
+                            <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                            <p className="text-white">{feature.description}</p>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                        <p className="text-gray-400">{feature.description}</p>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
             
-            <div className="mt-16 text-center">
-                <button className="bg-[#FFD700] text-black font-semibold py-2 px-6 rounded-md hover:bg-opacity-90 transition-all duration-300 text-lg px-8 py-3">Start Creating</button>
-            </div>
+           
         </div>
     );
 };
